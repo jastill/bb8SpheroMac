@@ -10,6 +10,12 @@ bb8.connect(function() {
   // roll BB-8 in a random direction, changing direction every five seconds
   setInterval(function() {
     var direction = Math.floor(Math.random() * 360);
-    bb8.roll(150, direction);
+    
+    console.log("Rolling in direction "+direction)
+    try { 
+      bb8.roll(150, direction);
+    } catch(err) {
+      console.log("Error sending command to BB8 "+error)
+    }
   }, 5000);
 });
