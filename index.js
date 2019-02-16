@@ -7,9 +7,9 @@ var sphero = require("sphero"),
   bb8 = sphero(bleID);
 
 bb8.connect(function() {
-  // roll BB-8 in a random direction, changing direction every second
+  // roll BB-8 in a random direction, changing direction every five seconds
   setInterval(function() {
     var direction = Math.floor(Math.random() * 360);
     bb8.roll(150, direction);
-  }, 1000);
+  }, 5000);
 });
